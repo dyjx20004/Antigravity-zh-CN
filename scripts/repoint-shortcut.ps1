@@ -8,11 +8,22 @@ $ErrorActionPreference = 'Stop'
 
 $projectRoot = Split-Path -Parent $PSScriptRoot
 $launcher    = Join-Path $projectRoot 'Antigravity-Proxy.cmd'
-$exe         = Join-Path $env:LOCALAPPDATA 'Programs\antigravity\Antigravity.exe'
 $bakDir      = Join-Path $projectRoot 'backups'
 
+$appDir = $null
+foreach ($cand in @($env:ANTIGRAVITY_DIR, (Join-Path $env:LOCALAPPDATA 'Programs\antigravity'), (Join-Path $env:ProgramFiles 'antigravity'))) {
+    if ($cand -and (Test-Path -LiteralPath (Join-Path $cand 'Antigravity.exe'))) {
+        $appDir = $cand
+        break
+    }
+}
+$exe = if ($appDir) { Join-Path $appDir 'Antigravity.exe' } else { '' }
+
 if (-not (Test-Path -LiteralPath $launcher)) { Write-Host ('[ERROR] 未找到代理启动脚本: ' + $launcher) -ForegroundColor Red; exit 1 }
-if (-not (Test-Path -LiteralPath $exe))      { Write-Host ('[ERROR] 未找到客户端程序: ' + $exe) -ForegroundColor Red; exit 1 }
+if (-not $exe -or -not (Test-Path -LiteralPath $exe)) {
+    Write-Host '[ERROR] 未找到 Antigravity.exe，请先安装客户端或在 config.cmd 中配置 ANTIGRAVITY_DIR。' -ForegroundColor Red
+    exit 1
+}
 
 $isCustomRoots = $SearchRoots -and $SearchRoots.Count -gt 0
 if ($isCustomRoots) {

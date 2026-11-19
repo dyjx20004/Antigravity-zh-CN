@@ -166,7 +166,7 @@ def kill_antigravity_processes():
     print("[执行] 正在关闭运行中的 Antigravity 进程...")
     if sys.platform == "win32":
         subprocess.run(
-            ["taskkill", "/F", "/IM", "Antigravity.exe"],
+            ["taskkill", "/F", "/T", "/IM", "Antigravity.exe"],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
             check=False,

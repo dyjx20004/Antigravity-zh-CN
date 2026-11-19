@@ -13,6 +13,17 @@
 
 ---
 
+## 📦 直接下载安装（推荐 · 新电脑免装 Python）
+
+1. 前往 [**Releases 最新版本页面**](https://github.com/dyjx20004/Antigravity-zh-CN/releases/latest) 下载 **`Antigravity-zh-CN-Windows-x64.zip`**（内置已编译好的 `Antigravity-Patcher.exe` 与 `Restore.exe`）；
+2. 解压到本地任意目录（例如 `D:\Tools\Antigravity-zh-CN`）；
+3. （可选）如果本地代理不是 `127.0.0.1:7897`，用记事本打开 [`config.cmd`](config.cmd) 修改 `ANTIGRAVITY_PROXY`；
+4. 双击 **`run-all.cmd`** 即可一键完成「**中文汉化 → 快捷方式修复 → 代理启动**」！
+
+> 💡 **提示**：首次运行后，可运行 `powershell -NoProfile -ExecutionPolicy Bypass -File scripts\create-desktop-shortcut.ps1` 在桌面生成一键快捷方式。每次 Antigravity 官方更新后，再双击一次即可恢复中文与代理。
+
+---
+
 ## ✨ 项目简介
 
 本项目基于开源项目 [MIMICTE/Antigravity-zh-CN](https://github.com/MIMICTE/Antigravity-zh-CN) 进行了针对 **Antigravity v2.33.0+** 的全面二次开发，并将日常使用所需的三个核心流程整合为**一键脚本**：

@@ -1,0 +1,63 @@
+name: Build & Release Windows Package
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: '可选：创建并发布指定版本的 Release（留空则仅生成构建产物 Artifact）'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install PyInstaller
+        run: python -m pip install --upgrade pip pyinstaller
+
+      - name: Build Windows executables
+        shell: powershell
+        run: |
+          powershell -NoProfile -ExecutionPolicy Bypass -File scripts\build-exe.ps1
+
+      - name: Stage release package
+        shell: powershell
+        run: |
+          $stage = Join-Path $env:RUNNER_TEMP 'Antigravity-zh-CN-Windows-x64'
+          if (Test-Path $stage) { Remove-Item -Recurse -Force $stage }
+          New-Item -ItemType Directory -Force -Path $stage | Out-Null
+          Copy-Item *.cmd, README.md, AGENT.md $stage
+          Copy-Item -Recurse dist, scripts, Antigravity-zh-CN $stage
+          $zipPath = Join-Path $env:GITHUB_WORKSPACE 'Antigravity-zh-CN-Windows-x64.zip'
+          if (Test-Path $zipPath) { Remove-Item -Force $zipPath }
+          Compress-Archive -Path "$stage\*" -DestinationPath $zipPath -CompressionLevel Optimal
+          Get-Item $zipPath | Select-Object Name, Length
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Antigravity-zh-CN-Windows-x64
+          path: Antigravity-zh-CN-Windows-x64.zip
+
+      - name: Publish GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v') || inputs.tag_name != ''
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.tag_name != '' && inputs.tag_name || github.ref_name }}
+          name: Antigravity-zh-CN ${{ inputs.tag_name != '' && inputs.tag_name || github.ref_name }} (Windows x64)
+          files: Antigravity-zh-CN-Windows-x64.zip
+          generate_release_notes: true
