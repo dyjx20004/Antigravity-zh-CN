@@ -1,0 +1,556 @@
+{
+  "dist/cablev2.js": [
+    [
+      "<title>Passkeys</title>",
+      "<title>通行密钥</title>"
+    ],
+    [
+      "<h1 class=\"sheet-title\">Passkeys</h1>",
+      "<h1 class=\"sheet-title\">通行密钥</h1>"
+    ],
+    [
+      "<p class=\"mechanism-header\">Use your phone or tablet</p>",
+      "<p class=\"mechanism-header\">使用你的手机或平板</p>"
+    ],
+    [
+      "Scan this QR code with the camera on the device that has your passkey for ${safeRpId}",
+      "用存有 ${safeRpId} 通行密钥的设备相机扫描此二维码"
+    ],
+    [
+      "title: 'Passkeys',",
+      "title: '通行密钥',"
+    ],
+    [
+      "modal?.updateStatus('Connecting to your device…');",
+      "modal?.updateStatus('正在连接你的设备…');"
+    ],
+    [
+      "modal?.updateStatus('Verify on your device to continue…');",
+      "modal?.updateStatus('请在你的设备上验证以继续…');"
+    ]
+  ],
+  "dist/computer/hud.js": [
+    [
+      "<title>AGY Desktop HUD</title>",
+      "<title>AGY 桌面控制栏</title>"
+    ],
+    [
+      "<div id=\"status\">AGY is controlling your Mac</div>",
+      "<div id=\"status\">AGY 正在控制你的电脑</div>"
+    ],
+    [
+      "<button id=\"stop\">Stop</button><button id=\"resume\">Resume</button>",
+      "<button id=\"stop\">停止</button><button id=\"resume\">恢复</button>"
+    ],
+    [
+      "end.textContent = 'Stopped';",
+      "end.textContent = '已停止';"
+    ],
+    [
+      "end.textContent = 'Stop';",
+      "end.textContent = '停止';"
+    ],
+    [
+      "title: 'AGY Desktop HUD',",
+      "title: 'AGY 桌面控制栏',"
+    ]
+  ],
+  "dist/deviceChooser.js": [
+    [
+      "hid: 'HID device',",
+      "hid: 'HID 设备',"
+    ],
+    [
+      "usb: 'USB device',",
+      "usb: 'USB 设备',"
+    ],
+    [
+      "serial: 'serial port',",
+      "serial: '串行端口',"
+    ],
+    [
+      "title: 'Connect a device',",
+      "title: '连接设备',"
+    ],
+    [
+      "buttons: [...snapshot.map(({ label }) => label), 'Cancel'],",
+      "buttons: [...snapshot.map(({ label }) => label), '取消'],"
+    ]
+  ],
+  "dist/ideInstall/wizardHtml.js": [
+    [
+      "<title>Welcome to Antigravity</title>",
+      "<title>欢迎使用 Antigravity</title>"
+    ],
+    [
+      ">Setting up…</div>",
+      ">正在配置…</div>"
+    ],
+    [
+      "<h1>Welcome to the new Antigravity!</h1>",
+      "<h1>欢迎使用全新 Antigravity！</h1>"
+    ],
+    [
+      "<p>Antigravity has been redesigned to put agents first with new capabilities. If you'd still like a code editor, you can download it as a separate app named <b>Antigravity IDE</b>.</p>",
+      "<p>Antigravity 经过全面重构，赋予智能体更强大的原生能力。如果您仍需要代码编辑器，可单独下载独立应用 <b>Antigravity IDE</b>。</p>"
+    ],
+    [
+      "<span>Download the Antigravity IDE</span>",
+      "<span>下载 Antigravity IDE</span>"
+    ],
+    [
+      "<button class=\"btn-primary\" id=\"btn-skip\">Explore the new Antigravity</button>",
+      "<button class=\"btn-primary\" id=\"btn-skip\">探索全新 Antigravity</button>"
+    ]
+  ],
+  "dist/ipcHandlers.js": [
+    [
+      "label: item.label ?? '',",
+      "label: (typeof translateContextLabel === 'function' ? translateContextLabel(item.label) : item.label) ?? '',"
+    ],
+    [
+      "electron_1.dialog.showErrorBox('Cannot open folder', t.error);",
+      "electron_1.dialog.showErrorBox('无法打开文件夹', t.error);"
+    ],
+    [
+      "message: 'Folder is on the Windows filesystem',",
+      "message: '文件夹位于 Windows 文件系统中',"
+    ],
+    [
+      "title: 'Open workspace',",
+      "title: '打开工作区',"
+    ],
+    [
+      "title: 'Open workspaces',",
+      "title: '打开工作区',"
+    ]
+  ],
+  "dist/main.js": [
+    [
+      "await electron_1.dialog.showErrorBox('Binary not found', msg);",
+      "await electron_1.dialog.showErrorBox('未找到核心二进制组件', msg);"
+    ],
+    [
+      "title: 'WSL distro not found',",
+      "title: '未找到 WSL 发行版',"
+    ],
+    [
+      "message: `The WSL distro \"${WSL_DISTRO}\" is no longer installed.`,",
+      "message: `WSL 发行版 \"${WSL_DISTRO}\" 已不再安装。`,"
+    ],
+    [
+      "detail: 'Antigravity opened on Windows instead.',",
+      "detail: 'Antigravity 已改为在 Windows 本地打开。',"
+    ],
+    [
+      "await electron_1.dialog.showErrorBox('WSL setup failed', msg);",
+      "await electron_1.dialog.showErrorBox('WSL 配置失败', msg);"
+    ],
+    [
+      "await electron_1.dialog.showErrorBox('Startup failed', msg);",
+      "await electron_1.dialog.showErrorBox('启动失败', msg);"
+    ],
+    [
+      "label: 'New Window',",
+      "label: '新建窗口',"
+    ],
+    [
+      "buttons: ['Cancel', 'Quit'],",
+      "buttons: ['取消', '退出'],"
+    ],
+    [
+      "title: 'Confirm Quit',",
+      "title: '确认退出',"
+    ],
+    [
+      "message: 'Are you sure you want to quit?',",
+      "message: '您确定要退出吗？',"
+    ],
+    [
+      "detail: 'There may be agents or background tasks running.',",
+      "detail: '可能还有智能体或后台任务正在运行。',"
+    ]
+  ],
+  "dist/provisionSplash.js": [
+    [
+      "<div>Setting up WSL: ${escapeHtml(distro)}</div>",
+      "<div>正在配置 WSL: ${escapeHtml(distro)}</div>"
+    ],
+    [
+      ".executeJavaScript(`document.getElementById('status').textContent = ${JSON.stringify(text)}`)",
+      ".executeJavaScript(`document.getElementById('status').textContent = ${JSON.stringify(typeof text === 'string' ? (text.includes('Downloading the Antigravity binary') ? '正在下载 Antigravity 二进制组件…' : (text.startsWith('Installing into ') ? text.replace('Installing into ', '正在安装到 ') : text)) : text)}`)"
+    ]
+  ],
+  "dist/remote/disconnectedPage.js": [
+    [
+      "reconnect: 'Reconnect',",
+      "reconnect: '重新连接',"
+    ],
+    [
+      "stop: 'Stop Server',",
+      "stop: '停止服务端',"
+    ],
+    [
+      "close: 'Close',",
+      "close: '关闭',"
+    ],
+    [
+      "? 'Restarting…'",
+      "? '正在重启…'"
+    ],
+    [
+      "? 'Reconnecting…'",
+      "? '正在重新连接…'"
+    ],
+    [
+      ": 'Disconnected';",
+      ": '已断开连接';"
+    ],
+    [
+      "? `Restarting the Antigravity server on ${host}…`",
+      "? `正在重启 ${host} 上的 Antigravity 服务端…`"
+    ],
+    [
+      "? `Reconnecting to ${host}…`",
+      "? `正在重新连接到 ${host}…`"
+    ],
+    [
+      ": `Disconnected from ${host}`;",
+      ": `已断开与 ${host} 的连接`;"
+    ],
+    [
+      "? 'This window opens it again once it has started.'",
+      "? '服务端启动完成后，此窗口将自动重新打开。'"
+    ],
+    [
+      "? `Its server on ${host} stopped, and its agents with it.`",
+      "? `${host} 上的服务端已停止，其智能体也已随之停止。`"
+    ],
+    [
+      ": `Agents keep running on ${host}.`",
+      ": `智能体将在 ${host} 上继续运行。`"
+    ],
+    [
+      "? `Its agents on ${host} stopped with it.`",
+      "? `${host} 上的智能体已随之停止。`"
+    ],
+    [
+      ": `Agents keep running on ${host} unless its server stopped.`;",
+      ": `智能体将在 ${host} 上继续运行（除非其服务端已停止）。`;"
+    ]
+  ],
+  "dist/remote/remoteManager.js": [
+    [
+      "title: 'Choose an SSH config file',",
+      "title: '选择 SSH 配置文件',"
+    ],
+    [
+      "title: 'Choose another SSH config file',",
+      "title: '选择其他 SSH 配置文件',"
+    ],
+    [
+      "buttons: ['Choose Another File…', 'Cancel'],",
+      "buttons: ['选择其他文件…', '取消'],"
+    ],
+    [
+      "title: 'SSH connection failed',",
+      "title: 'SSH 连接失败',"
+    ],
+    [
+      "title: 'Could not restart the SSH server',",
+      "title: '无法重启 SSH 服务端',"
+    ],
+    [
+      "message: `${entry.label} still runs Antigravity server ${running}.`,",
+      "message: `${entry.label} 仍在运行 Antigravity 服务端 ${running}。`,"
+    ],
+    [
+      "buttons: ['Stop Server', 'Cancel'],",
+      "buttons: ['停止服务端', '取消'],"
+    ],
+    [
+      "title: 'Stop SSH server',",
+      "title: '停止 SSH 服务端',"
+    ],
+    [
+      "message: `Stop the Antigravity server on ${entry.label}?`,",
+      "message: `停止 ${entry.label} 上的 Antigravity 服务端？`,"
+    ],
+    [
+      "detail: 'Agents running on this host will stop and its window will close. ' +",
+      "detail: '此主机上正在运行的智能体将会停止，且对应窗口将会关闭。' +"
+    ],
+    [
+      "'The server starts again the next time you connect.',",
+      "'下次连接时服务端将自动重新启动。',"
+    ],
+    [
+      "message: `Not connected to ${label}`,",
+      "message: `未连接到 ${label}`,"
+    ],
+    [
+      "detail: 'Reconnect first, then stop its server.',",
+      "detail: '请先重新连接，然后再停止其服务端。',"
+    ],
+    [
+      "buttons: ['Allow', \"Don't Allow\"],",
+      "buttons: ['允许', '不允许'],"
+    ],
+    [
+      "title: 'Microphone access',",
+      "title: '麦克风权限',"
+    ],
+    [
+      "message: `Allow ${label} to use your microphone?`,",
+      "message: `允许 ${label} 使用您的麦克风？`,"
+    ],
+    [
+      "buttons: ['Sign In', 'Cancel'],",
+      "buttons: ['登录', '取消'],"
+    ],
+    [
+      "buttons: ['Continue', 'Cancel'],",
+      "buttons: ['继续', '取消'],"
+    ],
+    [
+      "title: 'Sign in',",
+      "title: '登录',"
+    ],
+    [
+      "message: `Sign in to your organization for ${entry.label}?`,",
+      "message: `为 ${entry.label} 登录到您的组织？`,"
+    ],
+    [
+      "message: `Finish this sign-in on ${entry.label}?`,",
+      "message: `在 ${entry.label} 上完成此次登录？`,"
+    ],
+    [
+      "buttons: ['Take Over', 'Cancel'],",
+      "buttons: ['接管', '取消'],"
+    ],
+    [
+      "title: 'Shared home directory',",
+      "title: '共享主目录',"
+    ],
+    [
+      "buttons: ['Restart', 'Later'],",
+      "buttons: ['立即重启', '稍后'],"
+    ],
+    [
+      "title: 'Restart SSH server',",
+      "title: '重启 SSH 服务端',"
+    ],
+    [
+      "message: `${label} is running server ${running}; this app is ${expected}. Restart the server now?`,",
+      "message: `${label} 正在运行服务端 ${running}，当前客户端版本为 ${expected}。是否立即重启服务端？`,"
+    ],
+    [
+      "detail: `Any ${what} still running on it stops. The server starts again with this app's version.`,",
+      "detail: `正在其上运行的 ${what} 将会停止，服务端随后会以当前客户端版本重新启动。`,"
+    ]
+  ],
+  "dist/remote/sshArgs.js": [
+    [
+      "yes: 'SSH authentication failed. Check your password, code or keys, then try again.',",
+      "yes: 'SSH 身份验证失败。请检查密码、动态验证码或密钥，然后重试。',"
+    ],
+    [
+      "onReconnect: 'SSH authentication failed. Click Reconnect to sign in again.',",
+      "onReconnect: 'SSH 身份验证失败。请点击重新连接以再次登录。',"
+    ],
+    [
+      "no: \"SSH authentication failed. Antigravity can't answer password or code prompts on Windows yet: set up key-based login with ssh-agent, then try again.\",",
+      "no: \"SSH 身份验证失败。Antigravity 暂不支持在 Windows 下响应密码或动态码交互提示：请通过 ssh-agent 配置密钥免密登录后重试。\", "
+    ],
+    [
+      "exports.LINUX_HOST_NEEDED = 'Antigravity needs a Linux host on x64 or arm64 with glibc 2.26 or newer.';",
+      "exports.LINUX_HOST_NEEDED = 'Antigravity 需要搭载 glibc 2.26 或更新版本的 Linux x64 或 arm64 主机。';"
+    ],
+    [
+      "return \"That SSH host isn't valid. Enter an alias from your SSH config or a host like user@host or user@host:2222.\";",
+      "return \"该 SSH 主机地址无效。请输入 SSH 配置中的别名或类似 user@host、user@host:2222 的格式。\";"
+    ],
+    [
+      "return \"SSH can't use your SSH config file. Fix the problem ssh reports, or choose another config file.\";",
+      "return \"SSH 无法使用当前的 SSH 配置文件。请修复 ssh 报告的问题，或选择其他配置文件。\";"
+    ],
+    [
+      "return 'SSH port forwarding failed. Make sure the server allows TCP forwarding (AllowTcpForwarding) for your account, then try again.';",
+      "return 'SSH 端口转发失败。请确认服务端已允许您的账户进行 TCP 转发 (AllowTcpForwarding)，然后重试。';"
+    ],
+    [
+      "return `The SSH host isn't supported. ${exports.LINUX_HOST_NEEDED} Windows and macOS hosts aren't supported yet.`;",
+      "return `该 SSH 主机不受支持。${exports.LINUX_HOST_NEEDED} 暂不支持 Windows 和 macOS 主机。`;"
+    ],
+    [
+      "return 'Another host that shares your home directory runs the Antigravity server. Connect to that host, or connect again and choose Take Over.';",
+      "return '与此主目录共享的另一台主机正在运行 Antigravity 服务端。请改为连接该主机，或重新连接并选择“接管”。';"
+    ],
+    [
+      "return \"Couldn't install the Antigravity server on the SSH host. Make sure it has free disk space, and that it or this computer can download from the internet.\";",
+      "return \"无法在 SSH 主机上安装 Antigravity 服务端。请确认该主机磁盘空间充足，且该主机或本计算机能够访问互联网下载。\";"
+    ],
+    [
+      "return 'The Antigravity server on the SSH host stopped. Reconnect to start it again.';",
+      "return 'SSH 主机上的 Antigravity 服务端已停止。请重新连接以启动它。';"
+    ],
+    [
+      "return 'The SSH connection closed. Check your network connection, then reconnect.';",
+      "return 'SSH 连接已断开。请检查网络连接后重新连接。';"
+    ],
+    [
+      "return 'The connection was cancelled.';",
+      "return '连接已取消。';"
+    ]
+  ],
+  "dist/remote/sshPrompts.js": [
+    [
+      "return 'Accept updated host keys?';",
+      "return '接受更新后的主机密钥？';"
+    ],
+    [
+      "return `Question from ${who}`;",
+      "return `来自 ${who} 的询问`;"
+    ],
+    [
+      "return `Verification code for ${who}`;",
+      "return `${who} 的验证码`;"
+    ],
+    [
+      "return `Password for ${who}`;",
+      "return `${who} 的密码`;"
+    ],
+    [
+      "<p class=\"context\">Connecting to <span id=\"label\"></span></p>",
+      "<p class=\"context\">正在连接到 <span id=\"label\"></span></p>"
+    ],
+    [
+      "<div id=\"retry\" class=\"note\" hidden>Asked again: your last answer may not have worked.</div>",
+      "<div id=\"retry\" class=\"note\" hidden>再次提示：上一次输入的密码或凭据可能不正确。</div>"
+    ],
+    [
+      "<div id=\"long\" class=\"note\" role=\"alert\" hidden>That's too long.</div>",
+      "<div id=\"long\" class=\"note\" role=\"alert\" hidden>内容过长。</div>"
+    ],
+    [
+      "<div class=\"buttons\"><button id=\"cancel\" class=\"secondary\">Cancel</button><button id=\"continue\" class=\"primary\">Continue</button></div>",
+      "<div class=\"buttons\"><button id=\"cancel\" class=\"secondary\">取消</button><button id=\"continue\" class=\"primary\">继续</button></div>"
+    ],
+    [
+      "buttons: confirm ? ['Yes', 'No'] : ['Cancel'],",
+      "buttons: confirm ? ['是', '否'] : ['取消'],"
+    ]
+  ],
+  "dist/tray.js": [
+    [
+      "    contextMenu = electron_1.Menu.buildFromTemplate(actions);",
+      "    const translatedActions = actions.map(action => {\n        if (action.label === 'No agents running') action.label = '没有运行中的智能体';\n        if (action.label && action.label.startsWith('Open ')) action.label = '打开 Antigravity';\n        if (action.label === 'Show Antigravity') action.label = '显示 Antigravity';\n        if (action.label === 'Quit') action.label = '退出';\n        return action;\n    });\n    contextMenu = electron_1.Menu.buildFromTemplate(translatedActions);"
+    ],
+    [
+      "            countItem.label =\n                (count > 0 ? `${count}` : 'No') +\n                    ' agent' +\n                    (count === 1 ? '' : 's') +\n                    ' running';",
+      "            countItem.label = count > 0 ? `${count} 个智能体运行中` : '没有运行中的智能体';"
+    ]
+  ],
+  "dist/updater.js": [
+    [
+      "title: 'Check for Updates',",
+      "title: '检查更新',"
+    ],
+    [
+      "message: 'No updates available',",
+      "message: '当前已是最新版本，暂无可用更新。',"
+    ],
+    [
+      "buttons: ['OK'],",
+      "buttons: ['确定'],"
+    ]
+  ],
+  "dist/webauthn.js": [
+    [
+      "return `Account ${index + 1}`;",
+      "return `账户 ${index + 1}`;"
+    ],
+    [
+      "const rpLabel = details.relyingPartyId || 'this site';",
+      "const rpLabel = details.relyingPartyId || '此站点';"
+    ],
+    [
+      "title: 'Choose a Passkey',",
+      "title: '选择通行密钥',"
+    ],
+    [
+      "message: `Sign in to ${rpLabel}`,",
+      "message: `登录到 ${rpLabel}`,"
+    ],
+    [
+      "detail: 'Select a passkey account to continue:',",
+      "detail: '请选择一个通行密钥账户以继续：',"
+    ],
+    [
+      "buttons: [...accountLabels, 'Cancel'],",
+      "buttons: [...accountLabels, '取消'],"
+    ]
+  ],
+  "dist/webviewPopupSecurity.js": [
+    [
+      "insecure: 'Not secure',",
+      "insecure: '不安全',"
+    ],
+    [
+      "dangerous: '⚠ Not secure',",
+      "dangerous: '⚠ 不安全',"
+    ],
+    [
+      "'Your connection to this site is not secure',",
+      "'您与此网站的连接不安全',"
+    ],
+    [
+      "'Connection is secure',",
+      "'连接安全',"
+    ],
+    [
+      "neutral: ['Connection security information is not available for this page'],",
+      "neutral: ['无法获取此页面的连接安全信息'],"
+    ],
+    [
+      "label: 'Connection info…',",
+      "label: '连接信息…',"
+    ],
+    [
+      "title: 'Connection info',",
+      "title: '连接信息',"
+    ],
+    [
+      "buttons: ['OK'],",
+      "buttons: ['确定'],"
+    ]
+  ],
+  "dist/wsl.js": [
+    [
+      "error: `This folder belongs to the WSL distro \"${unc[1]}\", but this window is connected to \"${distro}\".`,",
+      "error: `此文件夹属于 WSL 发行版 \"${unc[1]}\"，但当前窗口连接到 \"${distro}\"。`,"
+    ],
+    [
+      "warning: 'This folder is on the Windows filesystem. Accessing it from WSL (via /mnt) can be slow — for best performance keep projects inside the WSL filesystem.',",
+      "warning: '此文件夹位于 Windows 文件系统。从 WSL 访问（通过 /mnt）可能较慢 — 为获得最佳性能，建议将项目保留在 WSL 文件系统中。',"
+    ],
+    [
+      "return { error: `This location cannot be opened in WSL: ${winPath}` };",
+      "return { error: `无法在 WSL 中打开此位置: ${winPath}` };"
+    ],
+    [
+      "onStatus?.('Downloading the Antigravity binary\\u2026');",
+      "onStatus?.('正在下载 Antigravity 二进制组件\\u2026');"
+    ],
+    [
+      "onStatus?.(`Installing into ${distro}\\u2026`);",
+      "onStatus?.(`正在安装到 ${distro}\\u2026`);"
+    ]
+  ],
+  "dist/loadingOverlay.js": [
+    [
+      ">Loading Antigravity<",
+      ">正在加载 Antigravity<"
+    ]
+  ]
+}
