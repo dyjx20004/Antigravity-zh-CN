@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -11,11 +12,11 @@ import {
 import { z } from 'zod';
 import { collectUsage, formatTokens, resolveDataDir } from '../core/collector.mjs';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const PLUGIN_ROOT = path.resolve(__dirname, '..', '..');
+const BASE_DIR = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 const APP_URI = 'ui://usage-tracker/card.html';
-const DEFAULT_HTML_PATH = path.join(PLUGIN_ROOT, 'dist', 'card.html');
+const DEFAULT_HTML_PATH = existsSync(path.join(BASE_DIR, 'card.html'))
+  ? path.join(BASE_DIR, 'card.html')
+  : path.resolve(BASE_DIR, '..', '..', 'dist', 'card.html');
 
 function parseDataDirArg(argv) {
   for (let i = 0; i < argv.length; i += 1) {

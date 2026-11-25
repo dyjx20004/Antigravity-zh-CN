@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, '..');
 
 async function main() {
-  const [css, bundled] = await Promise.all([
+  const [css, bundledUi] = await Promise.all([
     readFile(path.join(ROOT, 'src', 'ui', 'styles.css'), 'utf8'),
     esbuild.build({
       entryPoints: [path.join(ROOT, 'src', 'ui', 'app.js')],
@@ -21,7 +21,7 @@ async function main() {
     }),
   ]);
 
-  const js = bundled.outputFiles[0].text;
+  const js = bundledUi.outputFiles[0].text;
   const html = `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -37,10 +37,25 @@ async function main() {
 </html>
 `;
 
-  const outPath = path.join(ROOT, 'dist', 'card.html');
-  await mkdir(path.dirname(outPath), { recursive: true });
-  await writeFile(outPath, html, 'utf8');
-  console.log(`Built ${outPath} (${Buffer.byteLength(html, 'utf8')} bytes)`);
+  const outHtml = path.join(ROOT, 'dist', 'card.html');
+  await mkdir(path.dirname(outHtml), { recursive: true });
+  await writeFile(outHtml, html, 'utf8');
+  console.log(`Built ${outHtml} (${Buffer.byteLength(html, 'utf8')} bytes)`);
+
+  const outServer = path.join(ROOT, 'dist', 'mcp-server.cjs');
+  await esbuild.build({
+    entryPoints: [path.join(ROOT, 'src', 'server', 'mcp-server.mjs')],
+    bundle: true,
+    platform: 'node',
+    format: 'cjs',
+    target: ['node18'],
+    minify: true,
+    outfile: outServer,
+    define: {
+      'import.meta.url': '""',
+    },
+  });
+  console.log(`Built ${outServer}`);
 }
 
 main().catch((err) => {

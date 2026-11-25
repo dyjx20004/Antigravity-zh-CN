@@ -7,7 +7,7 @@
 在最终回复生成前，调用以下只读命令获取当前会话与近 5 小时用量多行摘要：
 
 ```text
-node "C:/Users/admin/.gemini/config/plugins/usage-tracker/scripts/usage-cli.mjs" summary --format line
+node "$HOME/.gemini/config/plugins/usage-tracker/scripts/usage-cli.mjs" summary --format line
 ```
 
 ## 2. 输出规范

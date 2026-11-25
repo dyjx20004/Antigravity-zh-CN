@@ -25,6 +25,12 @@
 - **无损还原官方英文版**：[`restore-en.cmd`](restore-en.cmd)
 - **修改代理端口**：编辑 [`config.json`](config.json) 中的 `proxy` 字段（默认 `http://127.0.0.1:7897`）
 
-## 安装全局 `/usage` 插件（新电脑使用）
+## 安装插件（新电脑开箱即用，零依赖免 npm install）
 
-将仓库内的 `usage-tracker/` 目录复制到 `%USERPROFILE%\.gemini\config\plugins\usage-tracker\`，并在该目录下执行 `npm install`（若未保留 `dist/card.html` 可再执行 `npm run build:ui`）即可全局启用 `/usage` 与每轮摘要。
+仓库内的 `usage-tracker/` 与 `plugin-manager/` 均已内置单文件打包产物（`dist/mcp-server.cjs` 与 `dist/*.html`），无需执行 `npm install`：
+
+1. **推荐：安装「插件管理中心」（`plugin-manager`）**
+   将仓库内的 `plugin-manager/` 目录复制到 `%USERPROFILE%\.gemini\config\plugins\plugin-manager\` 即可在 Antigravity 左侧插件栏或右侧辅助栏启用插件管理中心（支持从 GitHub 仓库/子目录、npm 包或本地目录安装、检查更新与卸载）。
+2. **安装 `/usage` 与每轮用量摘要（`usage-tracker`）**
+   - **方式 A**：在「插件管理中心」点击 `+ 添加插件`，输入 `https://github.com/dyjx20004/Antigravity-zh-CN#usage-tracker` 一键安装（后续可一键检查更新）。
+   - **方式 B**：手动将仓库内的 `usage-tracker/` 目录复制到 `%USERPROFILE%\.gemini\config\plugins\usage-tracker\` 即可生效。
