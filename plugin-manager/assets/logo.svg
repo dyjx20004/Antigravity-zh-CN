@@ -1,7 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-  <rect x="3" y="3" width="7" height="7" rx="1.5" />
-  <rect x="14" y="3" width="7" height="7" rx="1.5" />
-  <rect x="3" y="14" width="7" height="7" rx="1.5" />
-  <path d="M17.5 14v7" />
-  <path d="M14 17.5h7" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="pmBg" x1="12" y1="12" x2="116" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect x="12" y="12" width="104" height="104" rx="24" fill="url(#pmBg)"/>
+  <rect x="30" y="30" width="29" height="29" rx="7" fill="#FFFFFF" fill-opacity="0.96"/>
+  <rect x="69" y="30" width="29" height="29" rx="7" fill="#FFFFFF" fill-opacity="0.86"/>
+  <rect x="30" y="69" width="29" height="29" rx="7" fill="#FFFFFF" fill-opacity="0.86"/>
+  <path d="M83.5 70v27M70 83.5h27" stroke="#FDE047" stroke-width="10" stroke-linecap="round"/>
 </svg>
