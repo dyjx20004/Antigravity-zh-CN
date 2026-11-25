@@ -1,0 +1,12 @@
+{
+  "name": "usage-tracker",
+  "displayName": "用量统计",
+  "description": "本地直读 Antigravity 会话日志，提供对话内嵌 Token 用量卡片（当前会话/近 5 小时/今日/近 7 天/按模型与逐轮明细）、每轮回复末尾自动摘要与 Stop 钩子静默缓存。",
+  "version": "1.0.0",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "/usage 查看当前用量卡片",
+    "/usage 查看近 5 小时与今日 Token 用量分布",
+    "/usage 查看按模型汇总的 Token 统计"
+  ]
+}

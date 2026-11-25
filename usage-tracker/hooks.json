@@ -1,0 +1,11 @@
+{
+  "usage-tracker-stop-sync": {
+    "Stop": [
+      {
+        "type": "command",
+        "command": "node ./src/hooks/stop-hook.mjs",
+        "timeout": 15
+      }
+    ]
+  }
+}
